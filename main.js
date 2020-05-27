@@ -1,17 +1,29 @@
-var site_id
+var c_a_site_id_to_show
+var containers_ids_to_show = []
 var containers_ids = []
 var container_id_version = []
 
 // get site id :
-for(site_id in tC.containersLaunched){
-  site_id = site_id
+for(c_a_site_id in tC.containersLaunched){
+  c_a_site_id_to_show = c_a_site_id
 }
-console.log(`Site id is ${site_id}.`);
+console.log(`Site id is ${c_a_site_id_to_show}.`);
 
 // get the containers ids
-for(site_id in tC.containersLaunched){
-  var containers_ids = tC.containersLaunched[site_id]
+
+for(containers_id in tC.containersLaunched){
+  containers_ids = tC.containersLaunched[containers_id]
 }
+
+for(containers_ids_to_show in Object.keys(containers_ids)){
+  //containers_ids_to_show = Object.keys[containers_ids]
+  console.log(containers_ids_to_show.values)
+}
+
+// containers_ids_to_show.forEach((item, i) => {
+//   containers_ids_to_show.push(item)
+// });
+
 
 console.group("%c containers_ids ","color:white;background-color:green;font-family:system-ui;font-size:15px")
 console.log(containers_ids);
