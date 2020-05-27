@@ -15,28 +15,37 @@ for(containers_id in tC.containersLaunched){
   containers_ids = tC.containersLaunched[containers_id]
 }
 
-for(containers_ids_to_show in Object.keys(containers_ids)){
-  //containers_ids_to_show = Object.keys[containers_ids]
-  console.log(containers_ids_to_show.values)
-}
+// for(containers_ids_to_show in Object.keys(containers_ids)){
+// //  containers_ids_to_show = Object.keys(containers_ids)
+//    console.log(containers_ids_to_show)
+// }
 
-// containers_ids_to_show.forEach((item, i) => {
-//   containers_ids_to_show.push(item)
-// });
+Object.keys(containers_ids).forEach((item, i) => {
+  containers_ids_to_show.push(item)
+});
 
-
-console.group("%c containers_ids ","color:white;background-color:green;font-family:system-ui;font-size:15px")
-console.log(containers_ids);
-console.groupEnd()
+console.log("Containers ids are : "+Object.values(containers_ids_to_show).toLocaleString())
 
 
-for(container_id in containers_ids){
-  container_id_version.push(containers_ids[container_id])
-}
+Object.values(containers_ids).forEach((item, i) => {
+  console.log(item.v)
+  console.log(item.t)
+});
 
-console.group("%c container_id_version ","color:white;background-color:green;font-family:system-ui;font-size:15px")
-console.log(container_id_version);
-console.groupEnd()
+
+//
+// console.group("%c containers_ids ","color:white;background-color:green;font-family:system-ui;font-size:15px")
+// console.log(containers_ids);
+// console.groupEnd()
+//
+//
+// for(container_id in containers_ids){
+//   container_id_version.push(containers_ids[container_id])
+// }
+//
+// console.group("%c container_id_version ","color:white;background-color:green;font-family:system-ui;font-size:15px")
+// console.log(container_id_version);
+// console.groupEnd()
 
 // for(tag in container_id){
 //   console.log()
