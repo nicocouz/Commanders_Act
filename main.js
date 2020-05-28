@@ -1,53 +1,58 @@
-var c_a_site_id_to_show
-var containers_ids_to_show = []
-var containers_ids = []
-var container_id_version = []
-
 // get site id :
-for(c_a_site_id in tC.containersLaunched){
-  c_a_site_id_to_show = c_a_site_id
+for (site_id in tC.containersLaunched) {
+  console.log(`Site id is ${site_id}.`);
 }
-console.log(`Site id is ${c_a_site_id_to_show}.`);
 
-// get the containers ids
+// Object.keys(containers_ids).forEach((item, i) => {
+//   containers_ids_to_show.push(item)
+// });
 
-for(containers_id in tC.containersLaunched){
+// console.log("Containers ids are : " + Object.values(containers_ids_to_show).toLocaleString())
+
+for (containers_id in tC.containersLaunched) {
   containers_ids = tC.containersLaunched[containers_id]
+  //console.log(containers_ids.);
 }
-
-// for(containers_ids_to_show in Object.keys(containers_ids)){
-// //  containers_ids_to_show = Object.keys(containers_ids)
-//    console.log(containers_ids_to_show)
-// }
-
 Object.keys(containers_ids).forEach((item, i) => {
-  containers_ids_to_show.push(item)
+  console.log("container id number : " + item)
+  Object.values(containers_ids).forEach((item, i) => {
+    console.log("container version number : " + item.v)
+    Object.values(containers_ids).forEach((item, i) => {
+      //  console.log("container version number : "+item.v)
+      for (var i = 0; i < item.t.length; i++) {
+        console.log(item.t[i].label)
+      }
+    });
+  });
 });
 
-console.log("Containers ids are : "+Object.values(containers_ids_to_show).toLocaleString())
+//
+
+// Object.values(containers_ids).forEach((item, i) => {
+//     console.log(item)
+// });
 
 
-Object.values(containers_ids).forEach((item, i) => {
-  console.log(item.v)
-  console.log(item.t)
+// for (containers_id in tC.containersLaunched) {
+//   containers_ids = tC.containersLaunched[containers_id]
+//   //console.log(containers_ids.);
+//   Object.keys(containers_ids).forEach((item, i) => {
+//     console.log("Container id number : " + item)
+//     Object.values(containers_ids).forEach((item, i) => {
+//       console.log("Container version number : " + item.v)
+//       console.group("Tag(s) triggered : ")
+//       for (var i = 0; i < item.t.length; i++) {
+//         console.log(item.t[i].label)
+//       }
+//       console.groupEnd()
+//     });
+//   });
+// }
+
+javascript: for (site_id in tC.containersLaunched) console.log(`Site id is ${site_id}.`);
+for (containers_id in tC.containersLaunched) containers_ids = tC.containersLaunched[containers_id], Object.keys(containers_ids).forEach((n, e) => {
+  console.log("container id number : " + n), Object.values(containers_ids).forEach((n, e) => {
+    console.log("container version number : " + n.v);
+    for (e = 0; e < n.t.length; e++) console.log(n.t[e].label)
+  })
 });
-
-
-//
-// console.group("%c containers_ids ","color:white;background-color:green;font-family:system-ui;font-size:15px")
-// console.log(containers_ids);
-// console.groupEnd()
-//
-//
-// for(container_id in containers_ids){
-//   container_id_version.push(containers_ids[container_id])
-// }
-//
-// console.group("%c container_id_version ","color:white;background-color:green;font-family:system-ui;font-size:15px")
-// console.log(container_id_version);
-// console.groupEnd()
-
-// for(tag in container_id){
-//   console.log()
-// }
-//  //console.log(container_id[0].label);
