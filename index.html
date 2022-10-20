@@ -27,24 +27,28 @@
 
 
   <a style="color:#FFF" href=""></a>
-  <!-- SCRIPT COMMANDERS ACT START-->
-
-  <!-- <script type="text/javascript">
-    var tc_vars = {
-      env_template: "index",
-      page_name: "home",
-      location_url: location.pathname
-    };
-  </script>
-  <script type="text/javascript" src="https://cdn.tagcommander.com/4505/tc_nicolastest_21.js"></script>
- -->
 
 </head>
 
 <body>
 
+  <!-- The utag.sync.js script should run as early as possible, preferably
+   in the head of the document. See the Sample HTML for more information -->
+  <script src="https://tags.tiqcdn.com/utag/success-nicolas-cousin/main/prod/utag.sync.js"></script>
+
   <script type="text/javascript">
   var utag_data = {
+    page_category : "", //
+    page_name : "", //
+    event_type : "", // Contains the event type, e.g. link click', 'button click').
+    event_target : "", // Contains the name associated with an interactive element (link, button, etc).
+    event_attr1 : "", // Contains custom attribute 1 associated with an event.
+    event_attr2 : "", // Contains custom attribute 2 associated with an event.
+    event_attr3 : "", // Contains custom attribute 3 associated with an event.
+    event_attr4 : "", // Contains custom attribute 4 associated with an event.
+    page_section : "", // Contains a user-friendly page section, e.g. 'configuration section'.
+    page_subcategory : "", // Contains a user-friendly page subcategory, e.g. 'refrigerator page'.
+    page_type : "" // Contains a user-friendly page type, e.g. 'cart page'.
   }
   </script>
 
@@ -57,6 +61,7 @@
       })();
   </script>
 
+      
 
 
 
@@ -305,8 +310,6 @@
   <!-- Custom scripts for this template -->
   <script src="js/clean-blog.min.js"></script>
 <!--
-  <script type="text/javascript" src="https://cdn.tagcommander.com/4505/tc_nicolastest_20.js"></script>
-  <!-- SCRIPT COMMANDERS ACT START--> -->
 
 </body>
 <script type="text/javascript" src="main.js"></script>
